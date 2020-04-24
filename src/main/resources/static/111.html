@@ -1,0 +1,257 @@
+﻿
+<html>
+
+<head>
+<!-- 这里定义了cities这个模块的样式 -->
+<style>
+.cities {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+} 
+</style>
+</head>
+
+
+<!--<body> 元素定义了 HTML 文档的主体。-->
+<body bgcolor="yellow">
+    <!-- 标题1 -->
+    <h1 align="center"> This is a heading </h1>
+    <!-- 分割线 -->
+    <hr />
+        <p> <b> <big> <em> 1111 </em> </big> </b> </p>
+        <p>2222</p>
+    <h2 align="center"> <i> This is a heading </i> </h2>
+    <hr />
+        <p style="font-size:30px;background-color:red">
+        font-family、color 以及 font-size 属性分别定义元素中文本的字体系列、颜色和字体尺寸：
+        </p>
+        <p> <strong> 4444 <sub>9999</sub></strong></p>
+    <h3 align="center"> This is a heading </h3>
+    <hr />
+        <p style="font-family:verdana;color:red">5555</p>
+        <p>6666<br/>7777<br/>8888</p>
+        
+        <p>WWF 的目标是 <q>构建人与自然和谐相处的世界。</q></p>
+        
+        <bdo dir="rtl">
+            This line will be written from right to left
+        </bdo>
+        
+    <!-- 空行 注意br后面隔多少行都ok -->
+    <br/><br  />
+    
+    <p>
+    这个段落
+    在源代码       中
+    包含   许多行
+    但是      浏览器
+    忽略了  它们。
+    </p>
+    
+    <textarea name="message" rows="10" cols="30">
+    这里是元素定义多行输入字段
+    显示的是文本块
+    </textarea>
+    
+    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+    
+    <p>
+    段落的行数依赖于浏览器窗口的大小。如果调节浏览器窗口的大小，将改变段落中的行数。
+    </p>
+        
+    <a href="hehe.png" target="hehe.png"> click here</a>
+    <br/><br/>
+    
+    <!-- img src="222.png" alt="ttttt" width="500" height="700" /-->
+
+    <br/>
+    <p>    
+    表格由 &#60table&#62 标签来定义。每个表格均有若干行（由 &#60tr&#62 标签定义），
+    每行被分割为若干单元格（由 &#60td&#62 标签定义）。字母 &#60td&#62 指表格数据（table data），
+    即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。    
+    </p>
+        
+    <div>
+    <table border="1"; bgcolor="green">
+    <tr>
+    <td>row 1, cell 1</td>
+    <td>row 1, cell 2</td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr>
+    <td>row 2, cell 1</td>
+    <td>row 2, cell 2</td>
+    <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    
+    <!-- 下面是一个表单 -->
+    <form>
+
+    
+    </form> 
+    
+    <form action="ok.png" method="GET">
+    Contry:<br>
+    <input type="text" name="Contry" value="China" readonly>
+    <br>
+     First name:<br>
+    <input type="text" name="firstname">
+    <br>
+     Last name:<br>
+    <input type="text" name="lastname">
+    <br>
+     User password:<br>
+    <input type="password" name="psw">
+    <br>
+    <input type="radio" name="sex" value="male" checked>Male
+    <br>
+    <input type="radio" name="sex" value="female">Female
+    <br>
+    <select name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit">
+    </form> 
+    <br>
+    
+    
+    
+    <p>无序列表始于 &#60ul&#62; 标签。每个列表项始于 &#60li&#62 </p>    
+    <ul>
+    <li>Coffee</li>
+    <li>Milk</li>
+    </ul>    
+    </div>
+    
+    
+    <hr />
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+    </canvas>
+    
+    <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+    </canvas>
+    
+
+    <canvas id="myCanvas3" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)" width="200" height="100" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+    </canvas>    
+    
+    <script type="text/javascript">
+    var c=document.getElementById("myCanvas");
+    var cxt=c.getContext("2d");
+    cxt.moveTo(10,10);
+    cxt.lineTo(150,50);
+    cxt.lineTo(10,50);
+    cxt.stroke();
+    
+    var c=document.getElementById("myCanvas");
+    var cxt=c.getContext("2d");
+    cxt.fillStyle="#FF0000";
+    cxt.beginPath();
+    cxt.arc(70,18,15,0,Math.PI*2,true);
+    cxt.closePath();
+    cxt.fill();
+    
+    var c=document.getElementById("myCanvas2");
+    var cxt=c.getContext("2d");
+    var grd=cxt.createLinearGradient(0,0,175,50);
+    grd.addColorStop(0,"#FF0000");
+    grd.addColorStop(1,"#00FF00");
+    cxt.fillStyle=grd;
+    cxt.fillRect(0,0,175,50);
+        
+    var c=document.getElementById("myCanvas3");
+    var cxt=c.getContext("2d");
+    var img=new Image()
+    img.src="nok.png"
+    cxt.drawImage(img,0,0);        
+        
+        
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }        
+        
+    document.write("利用javascript来操作画布上的元素!")
+    </script>
+    
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <img id="drag1" src="ok.png" draggable="true" ondragstart="drag(event)" width="336" height="69">    
+
+    <hr />
+    
+    
+    
+    
+    <div class="cities">
+    <h2>London</h2>
+    <p>London is the capital city of England. 
+    It is the most populous city in the United Kingdom, 
+    with a metropolitan area of over 13 million inhabitants.</p>
+    </div>
+
+    <div class="cities">
+    <h2>Paris</h2>
+    <p>Paris is the capital and most populous city of France.</p>
+    </div>
+
+    <div class="cities">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+    and the most populous metropolitan area in the world.</p>
+    </div>
+    
+
+    <div id="header">
+    <h1>City Gallery</h1>
+    </div>
+
+    <div id="nav">
+    London<br>
+    Paris<br>
+    Tokyo<br>
+    </div>
+
+    <div id="section">
+    <h1>London</h1>
+    <p>
+    London is the capital city of England. It is the most populous city in the United Kingdom,
+    with a metropolitan area of over 13 million inhabitants.
+    </p>
+    <p>
+    Standing on the River Thames, London has been a major settlement for two millennia,
+    its history going back to its founding by the Romans, who named it Londinium.
+    </p>
+    </div>
+
+    <div id="footer">
+    Copyright W3School.com.cn
+    </div>
+    
+    
+
+
+    
+    
+</body>
+</html>
