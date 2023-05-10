@@ -11,8 +11,14 @@
 	<groupId>com.huawei</groupId>
 	<artifactId>here-you-are</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>here-you-are</name>
 	<description>Demo project for Spring Boot</description>
+	<modules>
+		<module>snake-client</module>
+		<module>snake-server</module>
+	</modules>
+
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -23,79 +29,5 @@
 		<!--&lt;!&ndash;thymeleaf2 layout1&ndash;&gt;-->
 		<!--<thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>-->
 	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-
-        <!--导入下面这个包之后才能在yaml中引入自定义配置 -->
-        <!-- 导入配置文件处理器，配置文件进行绑定就会有提示 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-		</dependency>
-
-
-		<!-- 在下面这里引入web相应资源 -->
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>jquery</artifactId>
-			<version>3.3.1-1</version>
-		</dependency>
-
-	</dependencies>
-
-	<build>
-		<plugins>
-			<!--这个是个有用的springboots  maven 打包插件-->
-			<!--@尚硅谷 这个插件，可以将应用打包成一个可执行的jar包-->
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>

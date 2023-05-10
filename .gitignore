@@ -1,0 +1,5 @@
+
+.idea/*
+*.log
+/snake-client/target/
+/snake-server/target/
